@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeActivity">
+
+    <!-- 처음 텍스트뷰는 id를 정해주는 것이 좋음 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:id="@+id/txtid"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp" />
+
+    <!-- below : txtid의 아래로 내려옴 -->
+    <!-- layout_alignLeft : 왼쪽 맞춤 // 위치 설정 -->
+    <!-- layout_alignParentRight="true" : 길이가 오른쪽 끝까지 늘어남 // 크기 설정 -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:id="@+id/editid"
+        android:layout_below="@id/txtid"
+        android:layout_alignLeft="@id/txtid"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD"
+        android:id="@+id/txtpw"
+        android:layout_below="@id/editid"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp" />
+
+    <!-- 비밀번호는 input type으로 설정 -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:text="PASSWORD"
+        android:id="@+id/editpw"
+        android:layout_below="@id/txtpw"
+        android:layout_alignLeft="@id/txtpw"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
